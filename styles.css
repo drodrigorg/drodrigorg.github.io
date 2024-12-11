@@ -1,0 +1,354 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+  }
+  
+  h1, h2 {
+    color: #175a1d; /* Verde SAT */
+  }
+  
+  a {
+    color: #005c3c;
+    text-decoration: none;s
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Header */
+  header {
+    background-color: #005c3c;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  nav ul li {
+    display: inline;
+  }
+  
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+  }
+  
+  /* Section Styling */
+  section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  section h2 {
+    margin-top: 0;
+  }
+  
+  /* Carrusel */
+  .carousel-container {
+    position: relative;
+    width: 960px;
+    height: 406px;
+    overflow: hidden;
+    margin: 20px auto;
+  }
+  
+  .carousel-slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .carousel-slide.active {
+    display: block;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; /* Alinea el texto a la derecha */
+    left: unset; /* Elimina cualquier alineación izquierda */
+    width: 40%; /* Ajusta el ancho a la mitad de la imagen (puedes modificar según necesidad) */
+    background: rgba(0, 92, 60, 0.8); /* Fondo semitransparente */
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: left; /* Mantén el texto alineado a la izquierda dentro del bloque */
+  }
+  
+  .carousel-caption ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+  }
+  
+  .carousel-caption ul li {
+    margin: 5px 0;
+  }
+  
+  .carousel-caption ul li a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .carousel-caption ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  /* Botones de navegación */
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .carousel-btn.prev {
+    left: 10px;
+  }
+  
+  .carousel-btn.next {
+    right: 10px;
+  }
+  
+  .carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Recursos */
+  #recursos ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  #recursos ul li {
+    margin: 10px 0;
+  }
+  
+  #recursos ul li a {
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  #recursos ul li a:before {
+    content: "📌";
+    margin-right: 5px;
+  }
+  #gato-animado {
+    position: fixed;
+    bottom: 20px;
+    left: -150px; /* Inicia fuera de la pantalla */
+    z-index: 1000; /* Asegura que esté siempre visible */
+    animation: correr 10s linear infinite; /* Duración y repetición */
+  }
+  
+  #gato-animado img, #gato-animado video {
+    width: 100px; /* Ajusta el tamaño del gato */
+    height: auto;
+  }
+  
+  /* Animación para que corra de izquierda a derecha */
+  @keyframes correr {
+    0% {
+      left: -150px; /* Fuera de la pantalla (inicio) */
+    }
+    50% {
+      transform: scaleX(1); /* Corre hacia la derecha */
+    }
+    100% {
+      left: 100vw; /* Fuera de la pantalla (final) */
+    }
+  }
+  nav ul li a {
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #00ff87;
+    transform: scale(1.1);
+  }
+  button {
+    background-color: #005c3c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background-color: #00a65a;
+    transform: translateY(-3px);
+  }
+  .carousel-slide {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 1s ease;
+  }
+  
+  .carousel-slide.active {
+    display: block;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .scroll-anim {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .scroll-anim.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(0,92,60,0.2) 0%, rgba(255,255,255,0) 100%);
+    z-index: -1;
+    animation: backgroundMove 10s infinite alternate;
+  }
+  
+  @keyframes backgroundMove {
+    0% {
+      background-position: 0 0;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+           
+  /* Contacto */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  form label {
+    font-weight: bold;
+  }
+  
+  form input, form textarea, form button {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #005c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #00482c;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #005c3c;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  footer a {
+    color: white;
+    margin: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .carousel-container {
+      width: 100%;
+      height: auto;
+    }
+  
+    .carousel-caption {
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+    }
+  
+    form {
+      font-size: 14px;
+    }
+  }
+  
